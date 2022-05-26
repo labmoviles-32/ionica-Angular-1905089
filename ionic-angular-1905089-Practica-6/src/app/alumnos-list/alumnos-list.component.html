@@ -1,0 +1,9 @@
+<!--<p>alumnos-list works!</p>-->
+<ion-grid class="con-bg">
+    <ion-list>
+        <ion-item *ngFor="let alumno of alumnos" [routerLink]="['/alumno-info',alumno.matricula]">
+            <img src="assets/imagenes/logo-uanl.jpg" width="50px">
+            <ion-label>{{alumno.nombre}}</ion-label>
+        </ion-item>
+    </ion-list>
+</ion-grid>
