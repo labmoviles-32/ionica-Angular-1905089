@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-alumnos',
@@ -9,8 +9,8 @@ export class AlumnosComponent implements OnInit {
 
   constructor() { }
 
-  alumnos = [
-    {
+  alumnos : any = [
+    /*{
       "nombre": "Cristhian", 
       "apellido": "Juarez", 
       "matricula": "1905089"
@@ -44,8 +44,27 @@ export class AlumnosComponent implements OnInit {
       "nombre": "Cristhian", 
       "apellido": "Juarez", 
       "matricula": "1905089"
-    }
+    }*/
   ]
+  
+  @Input() nombreAlumno: string = "";
+  @Input() apellidoAlumno: string = "";
+  @Input() matriculaAlumno: string = "";
+
+  agregarAlumnos() : void {
+    if(this.nombreAlumno.length==0 || this.apellidoAlumno.length==0 || this.matriculaAlumno.length==0){
+      alert("Complete todos los campos");
+    }
+    else{
+      var nuevoAlumno : any = {
+            //Propiedades del alumno
+            "nombre" : this.nombreAlumno,
+            "apellido" : this.apellidoAlumno,
+            "matricula" : this.matriculaAlumno
+          }
+          this.alumnos.push(nuevoAlumno);
+    }
+  }
 
   ngOnInit(): void {
   }
