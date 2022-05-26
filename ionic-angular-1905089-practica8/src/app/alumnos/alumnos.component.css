@@ -1,0 +1,15 @@
+.logo  {
+    text-align: right;
+}
+
+ion-grid.fondo{
+    background-color: rgb(145, 7, 150) !important;
+}
+
+.margen{
+    margin-right: 30px;
+}
+
+ion-img {
+    width: 40px;
+}

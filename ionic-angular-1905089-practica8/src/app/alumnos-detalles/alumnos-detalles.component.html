@@ -1,0 +1,9 @@
+<ion-card mode="ios">
+    <ion-card-content>
+        <p>Nombre: <strong>{{alumnoDetalle.nombre}}</strong></p>
+        <p>Apellido: <strong>{{alumnoDetalle.apellido}}</strong></p>
+        <p>Matrícula: <strong>{{alumnoDetalle.matricula}}</strong></p>
+    </ion-card-content>
+    <ion-button class="botonderecho" routerLink="/Lista">Back</ion-button>
+    <ion-button class="botonderecho" (click)="presentActionSheet()">Action Sheet</ion-button>
+</ion-card>
