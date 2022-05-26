@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
 import { IonicModule } from '@ionic/angular';
 
+
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,6 +16,7 @@ import { IonicModule } from '@ionic/angular';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     IonicModule.forRoot()
   ],
